@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
+:root {
+    --cor-verde: #70986e;
+    --cor-verdeForte: #0c2512;
+    --cor-verdeMedio: #2a5740;
+    --cor-azul: #b1d3c2;
+    --cor-amarelo: #e0bb46;
+    --cor-branco: #fff;
+    --cor-preto: #000;
+}
+
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Funnel Display", sans-serif;
+}
+
+/* Header fixo no topo da tela */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-azul);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 10px var(--cor-verdeMedio);
+    z-index: 1000;
+}
+
+header h1 {
+    color: var(--cor-branco);
+    font-size: 36px;
+}
+
+/* Estilo da barra de navegação */
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--cor-verdeMedio);
+}
+
+.logo img {
+    width: 64px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-list ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--cor-branco);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--cor-amarelo);
+}
+
+/* Botão de login */
+.login-button button {
+    border: none;
+    background-color: var(--cor-verde);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--cor-branco);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button button:hover {
+    background-color: var(--cor-verdeForte);
+}
+
+/* Ícone do menu mobile */
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu-icon button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu-icon img {
+    width: 32px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-verdeMedio);
+    width: 100%;
+    padding: 1rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-menu .nav-link {
+    color: var(--cor-branco);
+    font-size: 1.2rem;
+}
+
+body{
+    background-image: url('../imagens/fundoJornal.png');
+    /* Caminho da imagem */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Estilo para o container principal */
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 20px; /* Espaço entre os itens */
+    padding: 20px;
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o container */
+    margin-top: 130px;
+}
+
+/* Estilo de cada notícia */
+#noticia {
+    background-color: var(--cor-verdeMedio); /* Fundo leve */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 2px 5px var(--cor-verdeForte); /* Sombra leve */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo da imagem */
+#foto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Garante que a imagem se encaixe no espaço */
+}
+
+
+/* Estilo do conteúdo textual */
+#info {
+    padding: 15px;
+    text-align: left;
+}
+
+#info h1 {
+    font-size: 1.2rem;
+    color: var(--cor-branco);
+    margin-bottom: 10px;
+}
+
+#info p {
+    font-size: 1rem;
+    color: var(--cor-branco);
+    margin-bottom: 5px;
+}
+
+/* Tabela com bordas arredondadas */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    background-color: var(--cor-branco);
+    box-shadow: 0px 3px 10px var(--cor-verdeMedio);
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: center;
+    border: 1px solid var(--cor-verdeMedio);
+}
+
+th {
+    background-color: var(--cor-verde);
+    color: var(--cor-branco);
+}
+
+td {
+    padding: 1rem; /* Aumenta o espaçamento interno */
+}
+
+td a {
+    display: inline-block; /* Faz o link se comportar como um botão */
+    padding: 0.8rem 1.5rem; /* Adiciona espaçamento interno */
+    background-color: var(--cor-verdeMedio); /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    margin-top: 5px;
+    font-weight: bold; /* Torna o texto mais forte */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: all 0.3s ease-in-out; /* Suaviza a transição de todos os efeitos */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    line-height: 1.2; /* Ajusta a altura da linha para centralizar o texto verticalmente */
+    min-width: 120px; /* Define uma largura mínima para o botão */
+    text-transform: uppercase; /* Transforma o texto para maiúsculas (opcional) */
+}
+
+td a:hover {
+    background-color: var(--cor-amarelo); /* Cor de fundo do botão */
+    color: var(--cor-branco); 
+}
+
+/* Estilo da seção principal */
+.sessao1 {
+    padding: 2rem;
+    margin-top: 80px; /* Espaço para evitar sobreposição do header */
+    text-align: center;
+}
+
+.sessao1 h1 {
+    font-size: 2rem;
+    color: var(--cor-verdeMedio);
+    margin-bottom: 2rem;
+}
+
+#imagemTabela {
+    width: 50px; /* Define a largura da imagem */
+    height: 50px; /* Define a altura da imagem */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    border-radius: 5px; /* Bordas arredondadas nas imagens */
+    align-items: center;
+}
+/* Maior espaçamento entre botões de ação */
+td button {
+    margin: 0.9rem; /* Espaço ao redor dos botões */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+td button:hover {
+    background-color: var(--cor-verde);
+    color: var(--cor-branco);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Exibe as notícias em uma coluna */
+    }
+
+    .nav-list ul {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu.open {
+        display: flex;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+
+    .sessao1 h1 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+}
+
+/* Adicionando transição ao menu */
+.mobile-menu {
+    display: none; /* Inicialmente oculto */
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+    display: block; /* Exibe o menu quando aberto */
+    transform: translateX(0); /* Pode ser ajustado dependendo da animação desejada */
+    text-align: center;
+}
+
+.mobile-menu {
+    transform: translateX(-100%); /* Faz o menu começar fora da tela */
+}

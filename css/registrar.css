@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
+:root {
+    --cor-verde: #70986e;
+    --cor-verdeForte: #0c2512;
+    --cor-verdeMedio: #2a5740;
+    --cor-azul: #b1d3c2;
+    --cor-amarelo: #e0bb46;
+    --cor-branco: #fff;
+    --cor-preto: #000;
+}
+
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Funnel Display", sans-serif;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../imagens/fundoJornal.png');
+    /* Caminho da imagem */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Caixa de formulário */
+.box {
+    background-color: var(--cor-verdeMedio);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--cor-verdeForte);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--cor-azul);
+    font-weight: 450;
+}
+
+/* Estilo geral para inputs */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 4px 0;
+    border: 1px solid var(--cor-branco);
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #f9f9f9; /* Cor de fundo */
+    color: #333; 
+    box-sizing: border-box; 
+}
+
+input[type="date"] {
+    appearance: none; 
+    -webkit-appearance: none; 
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid var(--cor-branco);
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+    position: relative;
+}
+
+/* Oculta o campo de upload padrão */
+input[type="file"] {
+    display: none;
+}
+
+/* Estilo do botão personalizado */
+label[for="imagem"]::after {
+    content: "Selecione uma imagem";
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: var(--cor-verde);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+
+}
+
+/* Texto abaixo do botão */
+#file-name {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: var(--cor-verdeForte); /* Ajuste conforme o design desejado */
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    filter: invert(50%); 
+}
+
+input[type="date"]::-moz-placeholder {
+    opacity: 0; 
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--cor-verde);
+    border: none;
+    border-radius: 4px;
+    color: var(--cor-branco);
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--cor-verdeForte);
+    color: var(--cor-branco);
+}
+
+/* Estilo para o grupo de rádio */
+label {
+    font-size: 1em;
+    color: var(--cor-verdeMedio);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    accent-color: var(--cor-verdeForte); 
+}
+
+/* Estilo para o grupo Sexo */
+.sexo-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.sexo-group label {
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+/* Espaçamento entre as opções */
+.sexo-group label:last-of-type {
+    margin-right: 0;
+}
+/* Estilo para o grupo de rádio */
+label {
+    font-size: 1em;
+    color: var(--cor-branco);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    accent-color: var(--cor-verde); 
+}
+
+/* Estilo para o grupo Sexo */
+.sexo-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.sexo-group label {
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+/* Espaçamento entre as opções */
+.sexo-group label:last-of-type {
+    margin-right: 0;
+}
+
+
+/* Estilo do link de registro */
+p a {
+    color: var(--cor-amarelo);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para mensagens de erro */
+.mensagem {
+    color: var(--cor-amarelo);
+    margin-top: 20px;
+    font-weight: 600;
+}
