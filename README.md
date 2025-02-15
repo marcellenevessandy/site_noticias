@@ -18,29 +18,6 @@ O sistema foi construído utilizando ferramentas modernas para garantir desempen
 - **MySQL**: Banco de dados para armazenar as informações.
 - **HTML/CSS/JavaScript**: Tecnologias do front-end para a interface do usuário.
 
-📂 site_noticias
-│   ├── 📂 css           # Arquivos de estilo (CSS)
-│   ├── 📂 imagens       # Imagens do site
-│   ├── 📂 script        # Scripts JavaScript
-│   ├── 📂 uploads       # Arquivos enviados pelos usuários
-│
-├── 📂 src
-│   ├── 📂 classes     # Classes PHP que implementam a lógica do sistema
-│   ├── 📂 config      # Configurações gerais do sistema
-
-├── 📝 Arquivos PHP principais:
-│   ├── deletar.php
-│   ├── editar.php
-│   ├── editarNoticia.php
-│   ├── gerenciarNoticias.php
-│   ├── gerenciarUsuarios.php
-│   ├── index.php
-│   ├── login.php
-│   ├── logout.php
-│   ├── portal.php
-│   ├── registrar.php
-│   └── salvarNoticia.php
-
 ## 🚀 Como Funciona
 
 1. **Cadastro de Notícias**:
